@@ -24,11 +24,10 @@ class Vector:
             return Vector
     def __mul__(self, b):
         if (self.len==b.len):
-            new = Vector(self.koord)
+            res=0
             for i in range(b.len):
-                new.koord[i]=self.koord[i]*b.koord[i]
-            return new
+                res+=self.koord[i]*b.koord[i]
+            return res
         else:
             print ("Error")
-            Vector.koord='Error'
-            return Vector
+            return 'Error'
